@@ -1,0 +1,155 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Document</title>
+    <!-- Link ke Bootstrap CSS -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+
+    <!-- Link ke Bootstrap JS -->
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+      /* Awal kondisi navbar */
+      .navbar {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 3;
+        transition: background-color 0.3s, opacity 0.3s;
+      }
+
+      /* Saat di-scroll, navbar jadi transparan */
+      .navbar.transparent {
+        background-color: rgba(0, 0, 0, 0); /* Transparan */
+        opacity: 0.5;
+      }
+
+      /* Navbar kembali opaque saat di-hover */
+      .navbar:hover {
+        background-color: rgba(0, 0, 0, 0.9); /* Warna solid */
+        opacity: 1;
+      }
+
+      /* Hindari tumpang tindih konten */
+      body {
+        padding-top: px; /* Sesuaikan tinggi navbar */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">TokoKeren</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Beranda</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Produk</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Tentang Kami</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Kontak</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Hero Section-->
+    <section class="hero text-white py-5" style="position: relative; width: 100%; height: 100vh">
+      <div class="overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); z-index: 1"></div>
+      <div class="container" style="position: relative; z-index: 2; padding-top: 10%">
+        <h1 class="display-1">Selamat datang di TokoKeren!</h1>
+        <p class="lead">Temukan produk terbaik dengan harga terbaik hanya di sini.</p>
+        <a href="#produk" class="btn btn-light btn-lg">Lihat Produk</a>
+      </div>
+      <div class="background-image" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: url('scr/img/background/download (1).jpg'); background-position: center; z-index: 0"></div>
+    </section>
+    <hr />
+    <!-- Produk Section -->
+    <section id="produk" class="p-5" style="position: relative; background-size: cover; background-position: center; color: white">
+      <!-- Overlay hitam -->
+      <div class="overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0); z-index: 1"></div>
+
+      <!-- Gambar background produk unggulan -->
+      <div
+        class="background-image"
+        style="
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-image: url('scr/img/background/Download premium png of Purple abstract line design element by Nunny about lines, swirl, pink swirly abstract line design element, texture, and line vector 2282754.jpg');
+          background-size: 60%;
+          background-position: center;
+          z-index: 0;
+        "
+      ></div>
+
+      <!-- Konten -->
+      <div class="container" style="position: relative; z-index: 2">
+        <h2 class="text-center text-dark mb-4">Produk Unggulan</h2>
+        <div class="row background-image: text-center">
+          <!-- Produk 1 -->
+          <div class="col-md-4">
+            <div class="card">
+              <div style="background-image: url('scr/img/background/line1.jpg')"><img src="scr/img/produk/produkSepatu1-removebg-preview.png" style="background-color: rgba(0, 0, 0, 0.15)" class="card-img-top" alt="Produk 1" /></div>
+              <div class="card-body">
+                <h5 class="card-title">Produk 1</h5>
+                <p class="card-text">Deskripsi singkat produk 1.</p>
+                <a href="#" class="btn btn-primary">Beli Sekarang</a>
+              </div>
+            </div>
+          </div>
+          <!-- Produk 2 -->
+          <div class="col-md-4">
+            <div class="card">
+              <div style="background-image: url('scr/img/background/line1.jpg')"><img src="scr/img/produk/produkSepatu2-removebg-preview.png" style="background-color: rgba(0, 0, 0, 0.15)" class="card-img-top" alt="Produk 1" /></div>
+              <div class="card-body">
+                <h5 class="card-title">Produk 2</h5>
+                <p class="card-text">Deskripsi singkat produk 2.</p>
+                <a href="#" class="btn btn-primary">Beli Sekarang</a>
+              </div>
+            </div>
+          </div>
+          <!-- Produk 3 -->
+          <div class="col-md-4">
+            <div class="card">
+              <div style="background-image: url('scr/img/background/line1.jpg')"><img src="scr/img/produk/produkSepatu3-removebg-preview.png" style="background-color: rgba(0, 0, 0, 0.15)" class="card-img-top" alt="Produk 1" /></div>
+              <div class="card-body">
+                <h5 class="card-title">Produk 3</h5>
+                <p class="card-text">Deskripsi singkat produk 3.</p>
+                <a href="#" class="btn btn-primary">Beli Sekarang</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4">
+      <p>&copy; 2024 TokoKeren. Semua hak dilindungi.</p>
+    </footer>
+    <script>
+      const navbar = document.querySelector(".navbar");
+
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 50) {
+          navbar.classList.remove("transparent");
+        } else {
+          navbar.classList.add("transparent");
+        }
+      });
+    </script>
+  </body>
+</html>
